@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-workspace/button": ["libs/ui/button/src/index.ts"],
+      "@my-workspace/calculate": ["libs/utils/calculate/src/index.ts"],
+      "@my-workspace/footer": ["libs/shared/footer/src/index.ts"],
+      "@my-workspace/formatter": ["libs/utils/formatter/src/index.ts"],
+      "@my-workspace/header": ["libs/ui/header/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

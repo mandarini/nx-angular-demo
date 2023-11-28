@@ -1,0 +1,36 @@
+{
+  "name": "formatter",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/formatter/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/formatter",
+        "main": "libs/utils/formatter/src/index.ts",
+        "tsConfig": "libs/utils/formatter/tsconfig.lib.json",
+        "assets": ["libs/utils/formatter/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/utils/formatter/**/*.ts",
+          "libs/utils/formatter/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/utils/formatter/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
