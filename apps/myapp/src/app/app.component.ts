@@ -4,6 +4,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { ButtonComponent } from '@my-workspace/button';
 import { HeaderComponent } from '@my-workspace/header';
 import { FooterComponent } from '@my-workspace/footer';
+import { ContainerComponent } from '@my-workspace/container';
 
 @Component({
   standalone: true,
@@ -13,6 +14,7 @@ import { FooterComponent } from '@my-workspace/footer';
     ButtonComponent,
     HeaderComponent,
     FooterComponent,
+    ContainerComponent,
   ],
   selector: 'my-workspace-root',
   templateUrl: './app.component.html',
