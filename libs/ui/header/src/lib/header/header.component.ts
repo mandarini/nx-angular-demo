@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { formatter } from '@my-workspace/formatter';
 
 @Component({
   selector: 'my-workspace-header',
@@ -8,4 +9,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor() {
+    console.log(formatter());
+  }
+}

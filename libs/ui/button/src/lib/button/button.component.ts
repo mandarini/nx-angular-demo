@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { calculate } from '@my-workspace/calculate';
 
 @Component({
   selector: 'my-workspace-button',
@@ -8,4 +9,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
-export class ButtonComponent {}
+export class ButtonComponent {
+  constructor() {
+    console.log(calculate());
+  }
+}
